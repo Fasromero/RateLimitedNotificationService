@@ -17,6 +17,7 @@ namespace SampleAppRateLimited.Services.Application.NotificationService
             const string Minute = "minute";
             const string Hour = "hour";
             const string Day = "day";
+            const string EndEntry = "end";
             string notificationType = "";
             string userId = "";
             string notificationMessage = "";
@@ -27,11 +28,11 @@ namespace SampleAppRateLimited.Services.Application.NotificationService
             List<RateLimitRule> rateLimitRules = SetDefaultRateLimitRules(Minute, Hour, Day);
             List<Notification> notifications = SetSeedOnNotifications();
 
-            while (notificationType != "end")
+            while (notificationType != EndEntry)
             {
                 try
                 {
-                    SetNotification(out notificationType, out userId, out notificationMessage);
+                    SetNotification(EndEntry, out notificationType, out userId, out notificationMessage);
                     var currentNotificationTime = DateTime.Now;
 
                     var rateLimitRulesByCurrentNotificationType = (from r in rateLimitRules
@@ -58,7 +59,6 @@ namespace SampleAppRateLimited.Services.Application.NotificationService
                                 notificationsByUser = from n in notifications
                                                       where n.UserId == userId && n.Type == rateLimitRule.NotificationType
                                                       && n.Timestamp >= currentNotificationTime.AddMinutes(-minutesOfRule)
-                                                      orderby n.Timestamp descending
                                                       select n;
                                 Console.WriteLine("Notification successfully sent");
                             }
@@ -87,14 +87,14 @@ namespace SampleAppRateLimited.Services.Application.NotificationService
             };
         }
 
-        private static void SetNotification(out string notificationType, out string userId, out string notificationMessage)
+        private static void SetNotification(string endWord, out string notificationType, out string userId, out string notificationMessage)
         {
             userId = "";
             notificationMessage = "";
             Console.WriteLine("Set values for current notification, type end to finish. ");
             Console.Write("Notification type: ");
             notificationType = Console.ReadLine();
-            if (notificationType != "end")
+            if (notificationType != endWord)
             {
                 Console.Write("Notification userId: ");
                 userId = Console.ReadLine();
@@ -106,11 +106,12 @@ namespace SampleAppRateLimited.Services.Application.NotificationService
 
         private static List<Notification> SetSeedOnNotifications()
         {
+            var seedTimestamp = DateTime.Now.AddSeconds(-10);
             return new List<Notification>() {
-                new Notification(){ Type = "Status", UserId="1", Timestamp = DateTime.Now },
-                new Notification(){ Type = "News", UserId="1", Timestamp = DateTime.Now },
-                new Notification(){ Type = "Marketing", UserId="1", Timestamp = DateTime.Now },
-                new Notification(){ Type = "Status", UserId="1", Timestamp = DateTime.Now }
+                new Notification(){ Type = "Status", UserId="1", Timestamp = seedTimestamp },
+                new Notification(){ Type = "News", UserId="1", Timestamp = seedTimestamp },
+                new Notification(){ Type = "Marketing", UserId="1", Timestamp = seedTimestamp },
+                new Notification(){ Type = "Status", UserId="1", Timestamp = seedTimestamp }
             };
         }
     }
