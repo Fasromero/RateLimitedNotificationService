@@ -1,0 +1,16 @@
+C:\Repos\RateLimitedNotificationService\obj\Debug\net5.0\RateLimitedNotificationService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\RateLimitedNotificationService\obj\Debug\net5.0\RateLimitedNotificationService.AssemblyInfoInputs.cache
+C:\Repos\RateLimitedNotificationService\obj\Debug\net5.0\RateLimitedNotificationService.AssemblyInfo.cs
+C:\Repos\RateLimitedNotificationService\obj\Debug\net5.0\RateLimitedNotificationService.csproj.CoreCompileInputs.cache
+C:\Repos\RateLimitedNotificationService\obj\Debug\net5.0\RateLimitedNotificationService.csproj.AssemblyReference.cache
+C:\Repos\RateLimitedNotificationService\bin\Debug\net5.0\RateLimitedNotificationService.exe
+C:\Repos\RateLimitedNotificationService\bin\Debug\net5.0\RateLimitedNotificationService.deps.json
+C:\Repos\RateLimitedNotificationService\bin\Debug\net5.0\RateLimitedNotificationService.runtimeconfig.json
+C:\Repos\RateLimitedNotificationService\bin\Debug\net5.0\RateLimitedNotificationService.runtimeconfig.dev.json
+C:\Repos\RateLimitedNotificationService\bin\Debug\net5.0\RateLimitedNotificationService.dll
+C:\Repos\RateLimitedNotificationService\bin\Debug\net5.0\ref\RateLimitedNotificationService.dll
+C:\Repos\RateLimitedNotificationService\bin\Debug\net5.0\RateLimitedNotificationService.pdb
+C:\Repos\RateLimitedNotificationService\obj\Debug\net5.0\RateLimitedNotificationService.dll
+C:\Repos\RateLimitedNotificationService\obj\Debug\net5.0\ref\RateLimitedNotificationService.dll
+C:\Repos\RateLimitedNotificationService\obj\Debug\net5.0\RateLimitedNotificationService.pdb
+C:\Repos\RateLimitedNotificationService\obj\Debug\net5.0\RateLimitedNotificationService.genruntimeconfig.cache
