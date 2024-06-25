@@ -3,3 +3,13 @@
 ################################################################################
 
 /bin/Debug/net5.0
+/obj/Debug/net5.0/ref/RateLimitedNotificationService.dll
+/obj/Debug/net5.0/apphost.exe
+*.cache
+/obj/Debug/net5.0/RateLimitedNotificationService.csproj.FileListAbsolute.txt
+*.dll
+/obj/Debug/net5.0/RateLimitedNotificationService.pdb
+/obj/project.assets.json
+/obj/RateLimitedNotificationService.csproj.nuget.dgspec.json
+/obj/RateLimitedNotificationService.csproj.nuget.g.props
+/obj/RateLimitedNotificationService.csproj.nuget.g.targets
